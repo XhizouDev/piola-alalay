@@ -1,65 +1,65 @@
 # Cacho-CPP
 
-A standalone C++ implementation of the Cacho game engine (Alalay rules), including a Web API and a Web Client.
+Una implementación en C++ del motor de juego de Cacho (edición Alalay), incluyendo API Web y Cliente Web.
 
-## Repository Structure
+## Estructura del Repositorio
 
-- `src/`: Core engine headers and standalone simulation runner.
-- `api/`: Web API server using the Crow framework.
-- `web/`: Frontend web interface.
+- `src/`: Cabeceras centrales del motor y simulador de juego.
+- `api/`: Servidor de la API Web utilizando el framework Crow.
+- `web/`: Interfaz y front-end del Cliente Web.
 
-## 🚀 Getting Started
+## 🚀 Cómo Empezar
 
-### Prerequisites
+### Prerequisitos
 
-- `g++` (C++17 support)
+- `g++` (soporte para C++17)
 - `make`
-- `boost-system`, `boost-thread` (required for the Web API)
+- `boost-system`, `boost-thread` (requeridos para la API Web)
 
-### Building the Project
+### Compilar el Proyecto
 
-You can build both the core simulation and the Web API from the root directory:
+Puedes compilar tanto la simulación del juego como la API Web directamente desde el directorio raíz:
 
 ```bash
 make
 ```
 
-Alternatively, you can build them individually:
+Alternativamente, puedes compilarlos individualmente:
 
 ```bash
-# To build the standalone simulation
+# Para compilar solo el simulador
 cd src
 make
 
-# To build the Web API
+# Para compilar la API Web
 cd api
 make
 ```
 
-## 🎲 Running simulations
+## 🎲 Ejecutar simulaciones
 
-The `src/cacho` executable runs a game between automated players (Random).
+El ejecutable `src/cacho` corre una partida entre jugadores automatizados (Aleatorios).
 
 ```bash
 cd src
 ./cacho
 ```
 
-## 🌐 Running the Web API
+## 🌐 Ejecutando la API Web
 
-The `api/cacho_api` executable starts a server on `http://localhost:8080`.
+El ejecutable `api/cacho_api` inicializa un servidor en `http://localhost:8080`.
 
 ```bash
 cd api
 ./cacho_api
 ```
 
-Once running, open [http://localhost:8080](http://localhost:8080) in your browser to play.
+Una vez iniciado, abre [http://localhost:8080](http://localhost:8080) en tu navegador para jugar.
 
-## 🛠 Features
+## 🛠 Características
 
-- **Decoupled Engine**: Pure C++ implementation with no external dependencies (except for Crow/Boost in the API).
-- **Alalay Rules**: Full support for Alalay tournament rules.
-- **Web Interface**: Modern web client for human play.
-- **Random Player**: Included for testing and simulation.
-- **Human Player**: Base class and logic for human interaction.
+- **Motor Desacoplado**: Implementación en C++ puro sin dependencias externas (excepto por Crow/Boost en la API).
+- **Reglamento Alalay**: Soporte completo para las reglas de la edición Alalay.
+- **Interfaz Web**: Cliente web moderno para jugadores humanos.
+- **Jugador Aleatorio**: Incluido para testeo y simulación.
+- **Jugador Humano**: Lógica y clase base para interacción humana.
