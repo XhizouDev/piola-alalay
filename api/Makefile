@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O2 -pthread
-LDFLAGS = -lboost_system -lboost_thread
+LDFLAGS = -L/ucrt64/lib -lboost_thread-mt -lws2_32 -lmswsock
 
 TARGET = cacho_api
 SRCS = CachoAPI.cpp
