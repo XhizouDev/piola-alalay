@@ -1,3 +1,50 @@
+# Piola-Alalay
+---
+# Linux con apt
+
+Compilar cacho-cpp en Linux, cualquier distro, pero supongo lo utilizarás para la VM de Lubuntu.
+Creo esta branch principalmente para que se pueda tener junto al repositorio, las instrucciones completas de compilación, que fueron enviadas por AULA, en lugar de actualizar el repositorio cacho-cpp.
+
+En la VM, la clave de usuario root es Euldlm20, la necesitarás para utilizar sudo.
+
+---
+## 1. Actualizar paquetes
+
+Primero, refresca la lista de paquetes disponibles y actualiza los pendientes:
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+---
+## 2. Instalar dependencias
+
+En este paso instalaremos las cosas necesarias para compilar cacho-cpp:
+Si estás en la VM, solo debes ejecutar los últimos 2.
+
+```bash
+sudo apt install g++
+sudo apt install make
+sudo apt install libboost-all-dev
+sudo apt install libasio-dev
+```
+
+---
+## 3. Clonar la branch y compilar
+
+Finalmente, vas a clonar este fork para comenzar a trabajar y compilar con `make`:
+
+```bash
+git clone -b linux-lubuntu-VM https://github.com/XhizouDev/piola-alalay
+cd piola-alalay
+make
+```
+
+---
+# A continuación sigue el README original (traducido!!)
+---
+
 # Cacho-CPP
 
 Una implementación en C++ del motor de juego de Cacho (edición Alalay), incluyendo API Web y Cliente Web.
