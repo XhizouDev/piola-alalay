@@ -79,7 +79,7 @@ public:
   }
 
   void run(int gamesPerMatch = 10) {
-    std::cout << "Starting Tournament with " << creators.size() << " players!"
+    std::cout << "Comenzando Torneo con " << creators.size() << " jugadores!"
               << std::endl;
 
     for (int i = 0; i < gamesPerMatch; ++i) {
@@ -100,8 +100,8 @@ public:
   }
 
   void runParallel(int gamesPerMatch = 10) {
-    std::cout << "Starting Parallel Tournament with " << creators.size()
-              << " players (Pooled)!" << std::endl;
+    std::cout << "Comenzando Torneo Paralelo con " << creators.size()
+              << " jugadores (Reservados)!" << std::endl;
     std::mutex mtx;
     std::atomic<int> gamesLeft{gamesPerMatch};
     int numThreads = std::thread::hardware_concurrency();
@@ -143,9 +143,9 @@ public:
       }
     }
 
-    std::cout << "Starting Combinatorial Triplets Tournament: "
-              << triples.size() << " triplets, " << repetitions
-              << " repetitions each." << std::endl;
+    std::cout << "Comenzando Torneo de Tripletes Combinatorios: "
+              << triples.size() << " tripletes, " << repetitions
+              << " repeticiones cada uno." << std::endl;
 
     std::mutex mtx;
     std::atomic<size_t> nextTriple{0};
@@ -163,8 +163,8 @@ public:
 
           if (idx % 100000 == 0) {
             std::lock_guard<std::mutex> lock(mtx);
-            std::cout << "Progress: " << idx << " / " << triples.size()
-                      << " triplets (" << (idx * 100.0 / triples.size()) << "%)"
+            std::cout << "Progreso: " << idx << " / " << triples.size()
+                      << " tripletes (" << (idx * 100.0 / triples.size()) << "%)"
                       << std::endl;
           }
 
@@ -186,10 +186,10 @@ public:
   }
 
   void displayResults() {
-    std::cout << "\n--- TOURNAMENT RESULTS ---" << std::endl;
-    std::cout << std::left << std::setw(20) << "Player" << std::setw(12)
+    std::cout << "\n--- RESULTADOS TORNEO ---" << std::endl;
+    std::cout << std::left << std::setw(20) << "Jugador" << std::setw(12)
               << "T-Points" << std::setw(8) << "1st" << std::setw(8) << "2nd"
-              << std::setw(8) << "3rd" << std::setw(15) << "Avg Score"
+              << std::setw(8) << "3rd" << std::setw(15) << "Puntaje Promedio"
               << std::endl;
 
     std::vector<std::pair<std::string, Stats>> sorted;

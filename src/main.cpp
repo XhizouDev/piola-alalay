@@ -3,6 +3,8 @@
 #include <iostream>
 #include <memory>
 
+#include "NOMBREDETUJUGADORAQUI.hh"
+
 int main() {
   Tournament t;
 
@@ -11,9 +13,9 @@ int main() {
   t.addPlayer(
       []() { return std::make_shared<JugadorAleatorio>("Bot_Random_2"); });
   t.addPlayer(
-      []() { return std::make_shared<JugadorAleatorio>("Bot_Random_3"); });
+      []() { return std::make_shared<NOMBREDETUJUGADORAQUI>("NOMBREDETUJUGADORAQUI"); });
 
-  std::cout << "Starting simulation with 3 Random Players (100 matches)..."
+  std::cout << "Comenzando simulación con 2 Jugadores Aleatorios y NOMBREDETUJUGADORAQUI (100 partidas)..."
             << std::endl;
 
   t.run(100);
