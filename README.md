@@ -1,16 +1,33 @@
 # Piola-Alalay
 ---
-# Linux con apt
+# Windows con WSL
 
-Compilar cacho-cpp en Linux, cualquier distro, pero supongo lo utilizarás para la VM de Lubuntu.
-Creo esta branch principalmente para que se pueda tener junto al repositorio, las instrucciones completas de compilación, que fueron enviadas por AULA, en lugar de actualizar el repositorio cacho-cpp.
-
-En la VM, la clave de usuario root es Euldlm20, la necesitarás para utilizar sudo.
+En esta branch tambien se compilará cacho-cpp en Windows, sin embargo se utilizará WSL, en lugar de MSYS2.
+En la universidad, los ayudantes han enseñado a instalarlo, sin embargo tambien daré una introducción.
 
 ---
-## 1. Actualizar paquetes
+## ¿Qué es WSL?
 
-Primero, refresca la lista de paquetes disponibles y actualiza los pendientes:
+WSL (Windows Subsystem for Linux) es una característica de Windows que permite correr un sistema Linux real directamente dentro de Windows, sin necesidad de una VM. 
+A diferencia de MSYS2, WSL es un Linux completo, por lo que las instrucciones son prácticamente las mismas que las de Linux.
+
+---
+## 1. Instalar WSL
+
+Abre **PowerShell** o el **Símbolo del sistema** como administrador y ejecuta:
+
+```powershell
+wsl --install
+```
+
+Esto instala WSL con Ubuntu por defecto. Una vez termine, **reinicia tu PC**.
+
+Después del reinicio, Ubuntu se abrirá automáticamente y te pedirá crear un usuario y contraseña. Una vez hecho eso, ya estás dentro de Linux.
+
+---
+## 2. Actualizar paquetes
+
+Una vez en la terminal de Ubuntu, al igual que si estuvieras en Linux, refresca la lista de paquetes disponibles y actualiza los pendientes:
 
 ```bash
 sudo apt update
@@ -18,10 +35,9 @@ sudo apt upgrade
 ```
 
 ---
-## 2. Instalar dependencias
+## 3. Instalar dependencias
 
 En este paso instalaremos las cosas necesarias para compilar cacho-cpp:
-Si estás en la VM, solo debes ejecutar los últimos 2.
 
 ```bash
 sudo apt install g++
@@ -31,7 +47,7 @@ sudo apt install libasio-dev
 ```
 
 ---
-## 3. Clonar la branch y compilar
+## 4. Clonar la branch y compilar
 
 Finalmente, vas a clonar este fork para comenzar a trabajar y compilar con `make`:
 
