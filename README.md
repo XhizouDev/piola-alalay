@@ -61,7 +61,7 @@ Por lo que para evitar errores debes agregar `C:\msys64\ucrt64\bin` y `C:\msys64
 Finalmente, vas a clonar este fork para comenzar a trabajar y compilar con `make`:
 
 ```bash
-git clone -b MSYS2 https://github.com/XhizouDev/piola-alalay
+git clone -b windows-msys2 https://github.com/XhizouDev/piola-alalay
 cd piola-alalay
 make
 ```
