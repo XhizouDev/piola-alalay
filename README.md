@@ -52,7 +52,7 @@ sudo apt install libasio-dev
 Finalmente, vas a clonar este fork para comenzar a trabajar y compilar con `make`:
 
 ```bash
-git clone -b linux-lubuntu-VM https://github.com/XhizouDev/piola-alalay
+git clone -b windows-wsl https://github.com/XhizouDev/piola-alalay
 cd piola-alalay
 make
 ```
