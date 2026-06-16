@@ -1,4 +1,14 @@
 # Piola-Alalay
+
+> [!CAUTION]
+> ESTE REPOSITORIO NO ES EL REPOSITORIO OFICIAL PROPORCIONADO POR COORDINACIÓN PARA LA TAREA DE CACHO ALALAY EN C++ !!
+> 
+> EL TORNEO Y EVALUACIÓN NO SE LLEVARÁ A CABO EN ESTE PROGRAMA. ESTE FORK ES SOLO REFERENCIAL Y UNA GUÍA. ERES RESPONSABLE SI SE TE EVALÚA MAL POR CONFIAR CIEGAMENTE EN ESTE RECURSO. QUEDAS AVISADO.
+>
+> SIEMPRE CORROBORAR LA INFORMACIÓN EN LOS MEDIOS OFICIALES (AULA Y REPOSITORIO OFICIAL "CACHO-CPP"), ASÍ COMO PREFERIR CONSULTAR A PROFESORES Y AYUDANTES.
+>
+> PORFAVOR, ASEGURATE DE QUE TU TRABAJO COMPILE Y FUNCIONE CORRECTAMENTE BAJO LAS CONDICIONES OFICIALES (PROGRAMA OFICIAL Y ENTORNO VM LINUX) ANTES DE HACER CUALQUIER ENVÍO. DE NO HACERLO, TE ARRIESGAS A TENER CERO (0/100) COMO NOTA.
+
 ---
 ## Sobre este fork
 ---
@@ -37,11 +47,20 @@ El método jugar recibe 4 parámetros:
 
 Eso es principalmente lo que debes saber para comenzar, aunque entiendo que leer todo esto en texto plano puede resultar medio confuso igualmente, por lo que puedes encontrar las reglas del juego más a profundidad en [https://es.wikipedia.org](https://es.wikipedia.org/wiki/Cacho_Alalay). Y en AULA hay videos de como es el juego y como se juega. De todas formas recomiendo compilar el programa y mediante la API Web jugarlo tu mismo para familiarizarte con el juego y pensar en que lógica debería seguir tu bot.
 
-En este repositorio te ahorro un poco de trabajo, al proveerte una base de jugador, llamado `NOMBREDETUJUGADORAQUI.hh` donde solo debes programar y no preocuparte demasiado por herencia y la estructura base de la clase. Obviamente recuerda cambiarle el nombre al archivo, clase y en todas partes. Se te solicita por parte de coordinación que le pongas un nombre creativo a tu jugador, porque planean hacer un torneo con todos nuestros bots.
+En este repositorio te ahorro un poco de trabajo, al proveerte una base de jugador, llamado `NOMBREDETUJUGADORAQUI.hh` donde solo debes programar y no preocuparte demasiado por herencia y la estructura base de la clase. Obviamente recuerda cambiarle el nombre al archivo, clase y en todas partes donde se le referencie.
+
+> [!WARNING]
+> Es importante que le cambies el nombre a la clase de tu jugador. Sé creativo al bautizarlo y procura ser respetuoso.
+> 
+> Ádemas debes poner tu nombre completo en el constructor de la clase, para que se te pueda evaluar.
+>
+> Como último detalle, tu jugador además de funcionar correctamente, debe compilar sin warnings.
 
 <sub>Hay partes donde se usa el nombre del bot y/o la clase fuera del mismo archivo, por lo que para testearlo, tambien debes cambiarlo en `src/main.cpp` y `src/Makefile`. De lo contrario no podrás compilarlo, esto sin embargo no es estrictamente necesario para la entrega de la tarea, pues solo debes subir el archivo .hh.</sub>
 
-Ádemas debes poner tu nombre completo en el constructor de la clase, para que se te pueda evaluar.
+Recordatorio de que el torneo y evaluación se llevarán a cabo en un equipo sin acceso a internet, asi que no te pongas creativo con tu implementación usando APIs de IAs por ejemplo..
+
+Ahora para continuar, puedes seleccionar la branch de este repositorio que corresponda al entorno en el que vas a desarrollar. Éxito!
 
 ---
 ### Extra
