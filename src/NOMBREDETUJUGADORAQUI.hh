@@ -26,7 +26,7 @@ class NOMBREDETUJUGADORAQUI : public Jugador {
         // Lógica aquí
         // NO USES IA
 
-        return ACTUACION;
+        return 0;
         }
 
         std::string getNombreEstudiante() const {
